@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:ital,wght@0,300;1,300&display=swap");
 :root {
@@ -7,8 +6,10 @@
   --col-lg-gray: rgb(220, 220, 220);
   --col-aqua: #00d8eb;
   --col-dkblue: #0a1d24;
+  --col-oceanblue: #2d31fa;
+  --col-greyishblue: #5d8bf4;
+  --col-pink: #dff6ff;
   --col-dkblue-2: #1e3c46;
-  --col-lg-purple: rgb(129, 127, 237);
   /*fonts*/
   --font-fm-roboto: "Roboto", sans-serif;
   --font-oswald: "oswald", sans-serif;
@@ -36,6 +37,12 @@ h4 {
 }
 a {
   text-decoration: none;
+}
+section {
+  min-height: 25rem;
+  width: 100%;
+  padding: 2rem 0;
+  top: 38px;
 }
 /*Scrollbar*/
 ::-webkit-scrollbar {
@@ -97,13 +104,14 @@ a {
 section#profile {
   display: flex;
   position: relative;
-  top: 38px;
-  height: 55vh;
+  padding: 0;
+  height: 25rem;
   width: 100%;
   background-image: url("img/banner-cloud.jpg");
   background-size: cover;
   background-position-y: center;
   z-index: 1;
+  /* visibility: hidden; */
 }
 .bg-black {
   position: absolute;
@@ -125,8 +133,8 @@ section#profile {
 }
 
 .profile-content img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 20px 5px var(--col-dkblue);
@@ -140,7 +148,11 @@ section#profile {
 }
 .profile-desc h2,
 .profile-desc h3 {
-  color: var(--col-lg-purple);
+  color: var(--col-lg-gray);
+  margin-bottom: 5px;
+}
+.profile-desc h3 {
+  font-size: 1.1rem;
   margin-bottom: 15px;
 }
 
@@ -148,23 +160,74 @@ section#profile {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
-  width: 80%;
+  width: 100%;
   margin-top: 10px;
 }
 .socmed-btn a {
   display: flex;
   align-items: center;
   text-decoration: none;
-  margin: 3px 5px;
-  width: 250px;
-  color: var(--col-lg-purple);
+  margin: 4px 5px;
+  width: calc(50% - 20px);
+  color: var(--col-lg-gray);
   white-space: nowrap;
   font-size: 1rem;
 }
 
 .socmed-btn a svg {
-  height: 25px;
+  height: 20px;
   width: auto;
   margin-right: 7px;
 }
 /*End Home Profile Section*/
+
+/*Skill Section*/
+section#skill {
+  position: relative;
+}
+.skill-sec h2 {
+  text-align: center;
+  width: 400px;
+  margin: auto;
+}
+.skill-container {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 35px;
+  width: calc(100% - 70px);
+  flex-wrap: wrap;
+}
+.skill-container figure {
+  padding: 2rem 3rem;
+  margin: 5px;
+  width: 18rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px 5px var(--col-lg-gray);
+}
+.main-icon {
+  height: 6rem;
+}
+.skill-container figure figcaption {
+  margin-top: 5px;
+}
+.skill-container figure figcaption h3 {
+  margin-bottom: 10px;
+}
+.skill-container figure figcaption p {
+  height: 5rem;
+}
+.stack-icon {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 5px;
+  border-radius: 7px;
+}
+.stack-icon:hover {
+  box-shadow: 0 0 5px 1px var(--col-oceanblue);
+  transition: all 0.5s ease;
+}
+.secondary-icon {
+  height: 3rem;
+  margin: 5px 7px;
+}
+/*End Skill Section*/
