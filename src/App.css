@@ -1,38 +1,170 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,500;1,300;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:ital,wght@0,300;1,300&display=swap");
+:root {
+  --col-white: white;
+  --col-black: black;
+  --col-lg-gray: rgb(220, 220, 220);
+  --col-aqua: #00d8eb;
+  --col-dkblue: #0a1d24;
+  --col-dkblue-2: #1e3c46;
+  --col-lg-purple: rgb(129, 127, 237);
+  /*fonts*/
+  --font-fm-roboto: "Roboto", sans-serif;
+  --font-oswald: "oswald", sans-serif;
+  --font-parisienne: "Parisienne", cursive;
+  --font-cl-black: black;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--font-fm-roboto);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 7px;
+  margin-right: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--col-lg-gray);
+  border-radius: 10px;
+}
+/*End Scrollbar*/
+/*Home Navbar*/
+.nav-container {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 8rem);
+  justify-content: space-between;
+  padding: 5px 4rem;
+  box-shadow: 0 5px 10px 1px var(--col-lg-gray);
+  background-color: var(--col-dkblue);
+  z-index: 10;
+}
+.nav-container h1 {
+  font-size: 1.4rem;
+  font-family: var(--font-parisienne);
+  color: var(--col-white);
+}
+.nav-container ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: -5px 0;
+  list-style: none;
+}
+.nav-container ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 100%;
+  border-radius: 5%;
+}
+.nav-container ul li:hover {
+  background-color: var(--col-dkblue-2);
+  transition: all 0.3s ease;
+}
+.nav-container ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--col-white);
+}
+/*End Home Navbar*/
+
+/*Home Profile Section*/
+section#profile {
+  display: flex;
+  position: relative;
+  top: 38px;
+  height: 55vh;
+  width: 100%;
+  background-image: url("img/banner-cloud.jpg");
+  background-size: cover;
+  background-position-y: center;
+  z-index: 1;
+}
+.bg-black {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: var(--col-dkblue);
+  opacity: 0.6;
+}
+.profile-content {
+  display: flex;
+  position: absolute;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 50px;
+  width: calc(100% - 100px);
+  height: calc(100% - 40px);
+  z-index: 3;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.profile-content img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px 5px var(--col-dkblue);
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.profile-desc {
   display: flex;
   flex-direction: column;
+  padding: 10px 20px;
+  width: 60%;
+  min-height: 50%;
+}
+.profile-desc h2,
+.profile-desc h3 {
+  color: var(--col-lg-purple);
+  margin-bottom: 15px;
+}
+
+.socmed-btn {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-top: 10px;
+}
+.socmed-btn a {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  text-decoration: none;
+  margin: 3px 5px;
+  width: 250px;
+  color: var(--col-lg-purple);
+  white-space: nowrap;
+  font-size: 1rem;
 }
 
-.App-link {
-  color: #61dafb;
+.socmed-btn a svg {
+  height: 25px;
+  width: auto;
+  margin-right: 7px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/*End Home Profile Section*/
