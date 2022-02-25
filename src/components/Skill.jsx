@@ -4,7 +4,7 @@ import { img } from "./Script";
 function Skill() {
   return (
     <section id="skill" className="skill-sec">
-      <h2>STACK I LEARN AND MASTERED</h2>
+      <h2>LEARNING TECH STAK IN EASY WAY</h2>
       <div className="skill-container">
         <figure>
           <img

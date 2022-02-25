@@ -105,11 +105,19 @@ function ProfileSec() {
             I'm a Technology Enthusiast who seeking a potential benefit of
             Technology Stack
           </h3>
-          <div className="socmed-btn">
+          <div className="socmed-box">
             {socmedSVG.map((icon) => (
-              <a key={icon.id} href={icon.url} target="_blank" rel="noreferrer">
-                {icon.svg} {icon.desc}
-              </a>
+              <div className="socmed-btn">
+                <a
+                  key={icon.id}
+                  href={icon.url}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {icon.svg}
+                </a>
+                <span>{icon.desc}</span>
+              </div>
             ))}
           </div>
         </div>

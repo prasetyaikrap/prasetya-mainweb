@@ -4,6 +4,7 @@ import React from "react";
 import Navbar from "./Navbar";
 import ProfileSec from "./Profile";
 import Skill from "./Skill";
+import Project from "./Project";
 
 function Home() {
   return (
@@ -11,6 +12,7 @@ function Home() {
       <Navbar />
       <ProfileSec />
       <Skill />
+      <Project />
     </div>
   );
 }
