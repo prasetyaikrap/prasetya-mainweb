@@ -39,7 +39,7 @@ a {
   text-decoration: none;
 }
 section {
-  min-height: 25rem;
+  min-height: 20rem;
   width: 100%;
   padding: 2rem 0;
   top: 38px;
@@ -106,7 +106,7 @@ section#profile {
   position: relative;
   justify-content: center;
   padding: 0;
-  height: 25rem;
+  height: 20rem;
   width: 100%;
   background-image: url("img/banner-cloud.jpg");
   background-size: cover;
@@ -134,8 +134,8 @@ section#profile {
 }
 
 .profile-content img {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   object-fit: cover;
   border-radius: 50%;
   box-shadow: 0 0 20px 5px var(--col-dkblue);
@@ -144,7 +144,7 @@ section#profile {
   display: flex;
   flex-direction: column;
   padding: 10px 20px;
-  width: 60%;
+  width: 70%;
   min-height: 50%;
 }
 .profile-desc h2,
@@ -275,6 +275,25 @@ section#project {
   flex-shrink: 0;
 }
 /*End Project Section*/
+
+/*Footer*/
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: var(--col-dkblue);
+  height: 4rem;
+  top: 38px;
+}
+
+footer h3 {
+  color: white;
+  font-size: 0.8rem;
+  width: 600px;
+  text-align: center;
+  margin: auto;
+}
+/*End Footer*/
 
 @media screen and (max-width: 600px) {
   .nav-container ul {

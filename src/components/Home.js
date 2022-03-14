@@ -5,14 +5,16 @@ import Navbar from "./Navbar";
 import ProfileSec from "./Profile";
 import Skill from "./Skill";
 import Project from "./Project";
+import Footer from "./Footer";
 
 function Home() {
   return (
     <div className="home-body">
       <Navbar />
-      <ProfileSec />
       <Skill />
       <Project />
+      <ProfileSec />
+      <Footer />
     </div>
   );
 }
