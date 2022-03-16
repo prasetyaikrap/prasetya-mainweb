@@ -108,7 +108,7 @@ section#profile {
   padding: 0;
   height: 20rem;
   width: 100%;
-  background-image: url("img/banner-cloud.jpg");
+  background-image: url("../public/img/banner-cloud.jpg");
   background-size: cover;
   background-position-y: center;
   z-index: 1;

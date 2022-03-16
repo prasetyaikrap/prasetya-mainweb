@@ -1,9 +1,9 @@
 //components
-import Navbar from "./Navbar";
-import SidebarDahsboard from "./SidebarDashboard";
-import Footer from "./Footer";
-import ProfileSec from "./Profile";
-import Compose from "./Compose";
+import Navbar from "../components/Navbar";
+import SidebarDahsboard from "../components/SidebarDashboard";
+import Footer from "../components/Footer";
+import ProfileSec from "../components/Profile";
+import Compose from "../components/Compose";
 
 function menuRoute(menu) {
   let menuBody = "";

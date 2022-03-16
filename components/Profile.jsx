@@ -1,5 +1,4 @@
 import React from "react";
-import { img } from "./Script";
 const socmedSVG = [
   {
     id: 1,
@@ -98,7 +97,7 @@ function ProfileSec() {
     <section id="profile">
       <div className="bg-black"></div>
       <div className="profile-content">
-        <img src={img("prasetya-banner-photo.png")} alt="" />
+        <img src="/img/prasetya-banner-photo.png" alt="" />
         <div className="profile-desc">
           <h2>PRASETYA IKRA PRIYADI</h2>
           <h3>
