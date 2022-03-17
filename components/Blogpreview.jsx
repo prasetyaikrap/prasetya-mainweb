@@ -1,51 +1,55 @@
+import styles from "../styles/blogprev.module.css";
+
+const dataDummy = [
+  {
+    id: 1,
+    title: "Title 1",
+    subtitle: "Premis or Preview Text",
+  },
+  {
+    id: 2,
+    title: "Title 2",
+    subtitle: "Premis or Preview Text",
+  },
+  {
+    id: 3,
+    title: "Title 3",
+    subtitle: "Premis or Preview Text",
+  },
+  {
+    id: 4,
+    title: "Title 4",
+    subtitle: "Premis or Preview Text",
+  },
+  {
+    id: 5,
+    title: "Title 5",
+    subtitle: "Premis or Preview Text",
+  },
+];
+
 function Blogpreview() {
   return (
-    <section id="blog-prev">
-      <h2 className="blog-prev-title">LATEST CONTENT</h2>
-      <div className="prev-container">
-        <div className="post-container">
-          <div className="post-card">
-            <div className="img-prev">Preview Image</div>
-            <div className="post-prev">
-              <h3>Title</h3>
-              <p>Premis or Preview Text</p>
+    <section className={styles.blogPrev}>
+      <h2 className={styles.blogPrevTitle}>LATEST CONTENT</h2>
+      <div className={styles.prevContainer}>
+        <div className={styles.postContainer}>
+          {dataDummy.map((content) => (
+            <div key={content.id} className={styles.postCard}>
+              <div className={styles.imgPrev}>Preview Image</div>
+              <div className={styles.postPrev}>
+                <h3>{content.title}</h3>
+                <p>{content.subtitle}</p>
+              </div>
             </div>
-          </div>
-          <div className="post-card">
-            <div className="img-prev">Preview Image</div>
-            <div className="post-prev">
-              <h3>Title</h3>
-              <p>Premis or Preview Text</p>
-            </div>
-          </div>
-          <div className="post-card">
-            <div className="img-prev">Preview Image</div>
-            <div className="post-prev">
-              <h3>Title</h3>
-              <p>Premis or Preview Text</p>
-            </div>
-          </div>
-          {/* <div className="post-card">
-            <div className="img-prev">Preview Image</div>
-            <div className="post-prev">
-              <h3>Title</h3>
-              <p>Premis or Preview Text</p>
-            </div>
-          </div>
-          <div className="post-card">
-            <div className="img-prev">Preview Image</div>
-            <div className="post-prev">
-              <h3>Title</h3>
-              <p>Premis or Preview Text</p>
-            </div>
-          </div> */}
-          <div className="find-more">
+          ))}
+          <div className={styles.findMore}>
             <h3>Find More</h3>
           </div>
         </div>
-        <div className="socmed-container">
-          <div className="socmed-prev"></div>
-          <div className="video-prev"></div>
+        <div className={styles.socmedContainer}>
+          <div className={styles.socmedPrev}></div>
+          <div className={styles.videoPrev}></div>
         </div>
       </div>
     </section>

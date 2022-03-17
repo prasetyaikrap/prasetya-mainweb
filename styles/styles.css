@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&family=Roboto:ital,wght@0,300;1,300&display=swap");
+:root {
+  --col-white: white;
+  --col-black: black;
+  --col-lg-gray: rgb(220, 220, 220);
+  --col-aqua: #00d8eb;
+  --col-dkblue: #0a1d24;
+  --col-oceanblue: #2d31fa;
+  --col-greyishblue: #5d8bf4;
+  --col-pink: #dff6ff;
+  --col-dkblue-2: #1e3c46;
+  /*fonts*/
+  --font-fm-roboto: "Roboto", sans-serif;
+  --font-oswald: "oswald", sans-serif;
+  --font-parisienne: "Parisienne", cursive;
+  --font-cl-black: black;
+}
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  font-family: var(--font-fm-roboto);
+}
+
+h1 {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 1.6rem;
+}
+h3 {
+  font-size: 1.2rem;
+}
+h4 {
+  font-size: 1rem;
+}
+a {
+  text-decoration: none;
+}
+section {
+  min-height: 20rem;
+  width: 100%;
+  padding: 2rem 0;
+  top: 38px;
+}
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 7px;
+  margin-right: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--col-dkblue);
+  border-radius: 10px;
+}
+/*End Scrollbar*/
+
+/*Footer*/
+footer {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--col-dkblue);
+  height: 4rem;
+  top: 38px;
+}
+
+footer h3 {
+  color: white;
+  font-size: 0.8rem;
+  width: 600px;
+  text-align: center;
+}
+/*End Footer*/

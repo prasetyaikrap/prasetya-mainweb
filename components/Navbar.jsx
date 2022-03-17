@@ -1,6 +1,8 @@
+import styles from "../styles/nav.module.css";
+
 function Navbar() {
   return (
-    <div className="nav-container">
+    <div className={styles.navContainer}>
       <a href="/">
         <h1>Prasetya Priyadi</h1>
       </a>

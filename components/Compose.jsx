@@ -1,16 +1,23 @@
+import styles from "../styles/compose.module.css";
+
 function Compose() {
   return (
-    <div className="compose-container">
-      <form action="/">
-        <div className="input-box-1">
-          <label for="title-post">Title</label>
-          <input type="text" id="title-post" />
-        </div>
-        <div className="input-box-1">
-          <label for="subtitle-post">Title</label>
-          <input type="text" id="subtitle-post" />
-        </div>
-      </form>
+    <div className={styles.composeContainer}>
+      <div className={styles.composeBox}>
+        <h2 className={styles.headerCompose}>Create New Article</h2>
+        <form action="/">
+          <div className={styles.inputBox1}>
+            <label for="titlePost">Title</label>
+            <input type="text" id="titlePost" />
+          </div>
+          <div className={styles.inputBox1}>
+            <label for="subtitlePost">Subtitle</label>
+            <input type="text" id="subtitlePost" />
+          </div>
+          <div className={styles.textEditor}></div>
+        </form>
+      </div>
+      <div className={styles.settingsBox}></div>
     </div>
   );
 }

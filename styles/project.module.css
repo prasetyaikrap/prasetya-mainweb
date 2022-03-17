@@ -1,0 +1,40 @@
+/*Project Section*/
+.project {
+  position: relative;
+}
+.sectTitle {
+  margin: 10px auto 20px auto;
+  width: 50%;
+  text-align: center;
+  font-family: var(--font-oswald);
+}
+.projectContainer {
+  display: flex;
+  overflow-x: auto;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  margin: auto;
+  width: 95%;
+}
+.projectContainer::-webkit-scrollbar {
+  height: 7px;
+}
+.projectContainer::-webkit-scrollbar-thumb {
+  background-color: var(--col-dkblue-2);
+}
+.projectCard {
+  margin: 10px 30px;
+  padding: 1.5rem 3rem;
+  width: 30rem;
+  height: 250px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 5px var(--col-lg-gray);
+  flex-shrink: 0;
+}
+/*End Project Section*/
+
+@media screen and (max-width: 600px) {
+  .projectCard {
+    width: 24rem;
+  }
+}

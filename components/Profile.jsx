@@ -1,4 +1,5 @@
 import React from "react";
+import styles from "../styles/profile.module.css";
 const socmedSVG = [
   {
     id: 1,
@@ -94,25 +95,20 @@ const socmedSVG = [
 
 function ProfileSec() {
   return (
-    <section id="profile">
-      <div className="bg-black"></div>
-      <div className="profile-content">
+    <section className={styles.profile}>
+      <div className={styles.bgBlack}></div>
+      <div className={styles.profileContent}>
         <img src="/img/prasetya-banner-photo.png" alt="" />
-        <div className="profile-desc">
+        <div className={styles.profileDesc}>
           <h2>PRASETYA IKRA PRIYADI</h2>
           <h3>
             I'm a Technology Enthusiast who seeking a potential benefit of
             Technology Stack
           </h3>
-          <div className="socmed-box">
+          <div className={styles.socmedBox}>
             {socmedSVG.map((icon) => (
-              <div className="socmed-btn">
-                <a
-                  key={icon.id}
-                  href={icon.url}
-                  target="_blank"
-                  rel="noreferrer"
-                >
+              <div key={icon.id} className={styles.socmedBtn}>
+                <a href={icon.url} target="_blank" rel="noreferrer">
                   {icon.svg}
                 </a>
                 <span>{icon.desc}</span>

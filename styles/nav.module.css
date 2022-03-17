@@ -1,0 +1,54 @@
+/*Home Navbar*/
+.navContainer {
+  display: flex;
+  position: fixed;
+  top: 0;
+  width: calc(100vw - 8rem);
+  justify-content: space-between;
+  padding: 5px 4rem;
+  box-shadow: 0 5px 10px 1px var(--col-lg-gray);
+  background-color: var(--col-dkblue);
+  z-index: 10;
+}
+.navContainer h1 {
+  font-size: 1.4rem;
+  font-family: var(--font-parisienne);
+  color: var(--col-white);
+}
+.navContainer ul {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: -5px 0;
+  list-style: none;
+}
+.navContainer ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  height: 100%;
+  border-radius: 5%;
+}
+.navContainer ul li:hover {
+  background-color: var(--col-dkblue-2);
+  transition: all 0.3s ease;
+}
+.navContainer ul li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: var(--col-white);
+}
+.dashboardNav {
+  display: none;
+}
+/*End Home Navbar*/
+
+@media screen and (max-width: 600px) {
+  .navContainer ul {
+    display: none;
+  }
+}

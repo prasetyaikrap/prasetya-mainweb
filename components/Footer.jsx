@@ -1,7 +1,7 @@
-function Footer(props) {
+function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className={props.className}>
+    <footer>
       <h3>Copyright {year} | Prasetya Ikra Priyadi</h3>
     </footer>
   );

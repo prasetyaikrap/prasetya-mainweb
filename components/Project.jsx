@@ -1,17 +1,18 @@
 import React from "react";
+import styles from "../styles/project.module.css";
 
 function Project() {
   return (
-    <section id="project" className="project-sect">
-      <h2 className="sect-title">PROJECT SHOWCASE</h2>
-      <div className="project-container">
-        <div className="project-card">
+    <section className={styles.project}>
+      <h2 className={styles.sectTitle}>PROJECT SHOWCASE</h2>
+      <div className={styles.projectContainer}>
+        <div className={styles.projectCard}>
           <h2>Hello World</h2>
         </div>
-        <div className="project-card">
+        <div className={styles.projectCard}>
           <h2>Hello World</h2>
         </div>
-        <div className="project-card">
+        <div className={styles.projectCard}>
           <h2>Hello World</h2>
         </div>
       </div>

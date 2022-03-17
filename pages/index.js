@@ -12,7 +12,7 @@ function Home() {
       <Navbar />
       <Skill />
       <Blogpreview />
-      {/* <Project /> */}
+      <Project />
       <ProfileSec />
       <Footer />
     </div>
