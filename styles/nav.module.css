@@ -15,36 +15,32 @@
   font-family: var(--font-parisienne);
   color: var(--col-white);
 }
-.navContainer ul {
+.navBox {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   margin: -5px 0;
   list-style: none;
 }
-.navContainer ul li {
+
+.navBox a {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 75px;
   height: 100%;
   border-radius: 5%;
+  color: var(--col-white);
 }
-.navContainer ul li:hover {
+.navBox a:hover {
   background-color: var(--col-dkblue-2);
   transition: all 0.3s ease;
 }
-.navContainer ul li a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  color: var(--col-white);
+
+.adminNav {
+  visibility: hidden;
 }
-.dashboardNav {
-  display: none;
-}
+
 /*End Home Navbar*/
 
 @media screen and (max-width: 600px) {

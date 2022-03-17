@@ -1,21 +1,23 @@
 import React, { useState } from "react";
+import Link from "next/link";
 
 import styles from "../styles/adminDashboard.module.css";
-import Compose from "./Compose";
-import Skill from "./Skill";
-import ProfileSec from "./Profile";
 
-function Dashboard() {
-  const [content, setContent] = useState(<ProfileSec />);
-
+function Dashboard(props) {
   return (
     <div className={styles.dashboardContainer}>
       <div className={styles.sidebarContainer}>
-        <button onClick={() => setContent(<ProfileSec />)}>Profile</button>
-        <button onClick={() => setContent(<Compose />)}>Compose</button>
-        <button onClick={() => setContent(<Skill />)}>Settings</button>
+        <Link href="/dashboard/profile">
+          <button>Profile</button>
+        </Link>
+        <Link href="/dashboard/compose">
+          <button>Compose</button>
+        </Link>
+        <Link href="/dashboard/settings">
+          <button>Settings</button>
+        </Link>
       </div>
-      <div className={styles.contentContainer}>{content}</div>
+      <div className={styles.contentContainer}>{props.body}</div>
     </div>
   );
 }

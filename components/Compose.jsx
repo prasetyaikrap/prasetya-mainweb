@@ -8,11 +8,11 @@ function Compose() {
         <form action="/">
           <div className={styles.inputBox1}>
             <label for="titlePost">Title</label>
-            <input type="text" id="titlePost" />
+            <input type="text" id="titlePost" spellCheck="false" />
           </div>
           <div className={styles.inputBox1}>
             <label for="subtitlePost">Subtitle</label>
-            <input type="text" id="subtitlePost" />
+            <input type="text" id="subtitlePost" spellCheck="false" />
           </div>
           <div className={styles.textEditor}></div>
         </form>

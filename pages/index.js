@@ -5,11 +5,12 @@ import Skill from "../components/Skill";
 import Project from "../components/Project";
 import Footer from "../components/Footer";
 import Blogpreview from "../components/Blogpreview";
+import styles from "../styles/nav.module.css";
 
 function Home() {
   return (
     <div className="home-body">
-      <Navbar />
+      <Navbar navBox={styles.navBox} />
       <Skill />
       <Blogpreview />
       <Project />
