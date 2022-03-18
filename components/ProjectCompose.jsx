@@ -1,10 +1,10 @@
 import styles from "../styles/compose.module.css";
 
-function Compose() {
+function ProjectCompose() {
   return (
     <div className={styles.composeContainer}>
       <div className={styles.composeBox}>
-        <h2 className={styles.headerCompose}>Create New Article</h2>
+        <h2 className={styles.headerCompose}>Add Portfolio</h2>
         <form action="/">
           <div className={styles.inputBox1}>
             <label for="titlePost">Title</label>
@@ -22,4 +22,4 @@ function Compose() {
   );
 }
 
-export default Compose;
+export default ProjectCompose;

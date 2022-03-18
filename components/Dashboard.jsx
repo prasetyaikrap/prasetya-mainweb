@@ -8,13 +8,13 @@ function Dashboard(props) {
     <div className={styles.dashboardContainer}>
       <div className={styles.sidebarContainer}>
         <Link href="/dashboard/profile">
-          <button>Profile</button>
+          <button className={styles.menuParent}>Profile</button>
         </Link>
-        <Link href="/dashboard/compose">
-          <button>Compose</button>
+        <Link href="/dashboard/content">
+          <button className={styles.menuParent}>Content Management</button>
         </Link>
         <Link href="/dashboard/settings">
-          <button>Settings</button>
+          <button className={styles.menuParent}>Settings</button>
         </Link>
       </div>
       <div className={styles.contentContainer}>{props.body}</div>

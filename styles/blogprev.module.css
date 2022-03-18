@@ -24,7 +24,7 @@
 .postContainer {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 60%;
   margin-right: 20px;
   row-gap: 10px;
 }

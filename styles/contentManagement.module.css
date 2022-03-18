@@ -1,0 +1,90 @@
+.contentContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 1rem 2rem 1rem 2rem;
+}
+.contentTitle {
+  font-family: var(--font-oswald);
+}
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  row-gap: 10px;
+  margin-left: 1rem;
+  width: 75%;
+  min-height: 200px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px var(--col-lg-gray);
+}
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.contentHeader h2 {
+  font-family: var(--font-oswald);
+}
+.contentHeader button {
+  width: 125px;
+  padding: 5px 0 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--col-dkblue-2);
+  color: white;
+  font-family: var(--font-oswald);
+  font-weight: 800;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  width: 100%;
+}
+.contentCard {
+  box-sizing: border-box;
+  width: 95%;
+  height: 70px;
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.contentPageNav {
+  display: flex;
+  position: relative;
+  justify-content: right;
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  align-items: right;
+  padding: 5px 0.7rem 5px 0;
+}
+.arrowPrev,
+.arrowNext,
+.numberPage {
+  box-sizing: border-box;
+  width: 80px;
+  height: 30px;
+  border: 0.5px solid rgb(221, 221, 221);
+  background-color: white;
+}
+.arrowPrev {
+  border-radius: 10% 0 0 10%;
+}
+.arrowNext {
+  border-radius: 0 10% 10% 0;
+}
+
+.numberPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}

@@ -15,17 +15,24 @@
   background-color: var(--col-dkblue);
   padding-top: 2rem;
 }
-.sidebarContainer button {
+.menuParent,
+.menuChild {
   border: none;
   text-align: left;
   padding: 1rem 0.5rem 1rem 2rem;
   background-color: var(--col-dkblue);
   color: var(--col-white);
 }
-.sidebarContainer button:hover {
+.menuParent:hover,
+.menuChild:hover {
   cursor: pointer;
   background-color: var(--col-dkblue-2);
   transition: all 0.3s ease;
+}
+.menuChildBox {
+  display: flex;
+  flex-direction: column;
+  padding-left: 1.5rem;
 }
 .contentContainer {
   box-sizing: border-box;
@@ -33,6 +40,7 @@
   width: calc(100% - 13rem);
   padding: 0.5rem 2rem 0.5rem 2rem;
   background-color: var(--col-white);
+  overflow-y: scroll;
 }
 .contentContainer::after {
   background-color: aqua;

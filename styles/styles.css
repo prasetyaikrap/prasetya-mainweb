@@ -44,6 +44,9 @@ section {
   padding: 2rem 0;
   top: 38px;
 }
+button {
+  cursor: pointer;
+}
 /*Scrollbar*/
 ::-webkit-scrollbar {
   width: 7px;
