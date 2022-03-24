@@ -1,7 +1,8 @@
 import { useRouter } from "next/router";
+import { useAuth } from "../../middleware/AuthContext";
 
 //components
-import Navbar from "../../components/Navbar";
+import { NavbarAdmin } from "../../components/Navbar";
 import Dashboard from "../../components/Dashboard";
 import Footer from "../../components/Footer";
 import ContentManagement from "../../components/ContentManagement";
@@ -10,11 +11,18 @@ import ProfileSec from "../../components/ProfilePrev";
 import BlogCompose from "../../components/BlogCompose";
 import ProjectCompose from "../../components/ProjectCompose";
 import CourseCompose from "../../components/CourseCompose";
-import styles from "../../styles/nav.module.css";
+import BlogPost from "../../components/BlogPost";
+import { useState } from "react";
 
 function AdminDashboard() {
-  let body = "";
   const router = useRouter();
+  const { user, logout } = useAuth();
+  //check user
+  if (!user) {
+    router.push("/admin/login");
+  }
+  //Re-Render Body
+  let body = "";
   const { params = [] } = router.query;
   switch (true) {
     case params.length === 0:
@@ -22,6 +30,9 @@ function AdminDashboard() {
       break;
     case params[0] === "profile":
       body = <ProfileSec />;
+      break;
+    case params[0] === "post":
+      body = <BlogPost />;
       break;
     case params[0] === "content":
       switch (true) {
@@ -47,10 +58,14 @@ function AdminDashboard() {
     default:
       body = <h1>Error Site. page does not exist</h1>;
   }
-
+  function logoutHandler(e) {
+    e.preventDefault();
+    logout();
+    router.push("/admin");
+  }
   return (
     <>
-      <Navbar navBox={[styles.adminNav].join(" ")} />
+      <NavbarAdmin logoutHandler={logoutHandler} />
       <Dashboard body={body} />
       <Footer />
     </>

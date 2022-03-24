@@ -1,0 +1,61 @@
+.authContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100vw;
+  height: 100vh;
+}
+
+.loginContainer,
+.resetContainer {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 4rem 3rem;
+  row-gap: 1.5rem;
+  width: 350px;
+  border-radius: 10px;
+  border: 1px solid gainsboro;
+  box-shadow: 0 0 10px 1px rgb(223, 223, 223);
+}
+.loginContainer h1,
+.resetContainer h1 {
+  text-align: center;
+  font-family: var(--font-oswald);
+}
+.formContainer {
+  display: flex;
+  flex-direction: column;
+}
+.formContainer label,
+.formContainer input {
+  font-family: var(--font-oswald);
+  margin-bottom: 0.4rem;
+}
+.formContainer input {
+  box-sizing: border-box;
+  margin-bottom: 0.8rem;
+  height: 2rem;
+  border-radius: 5px;
+  outline: none;
+  padding: 15px 5px;
+}
+
+.formBtn {
+  width: 50%;
+  height: 2rem;
+  margin: auto;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--col-dkblue);
+  color: white;
+  font-family: var(--font-oswald);
+}
+
+.loginContainer a,
+.resetContainer a {
+  font-family: var(--font-oswald);
+  color: black;
+  margin-top: -1rem;
+}

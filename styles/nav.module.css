@@ -1,17 +1,21 @@
 /*Home Navbar*/
 .navContainer {
   display: flex;
-  position: fixed;
+  position: sticky;
   top: 0;
-  width: calc(100vw - 8rem);
+  width: 100%;
+  z-index: 10;
   justify-content: space-between;
   padding: 5px 4rem;
   box-shadow: 0 5px 10px 1px var(--col-lg-gray);
   background-color: var(--col-dkblue);
-  z-index: 10;
+  box-sizing: border-box;
+  height: 3.5rem;
 }
 .navContainer h1 {
   font-size: 1.4rem;
+  text-align: center;
+  cursor: pointer;
   font-family: var(--font-parisienne);
   color: var(--col-white);
 }
@@ -37,10 +41,23 @@
   transition: all 0.3s ease;
 }
 
-.adminNav {
-  visibility: hidden;
+.adminNavBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  border-radius: 5%;
+  color: var(--col-white);
 }
-
+.logoutBtn {
+  border-radius: 5px;
+  border: none;
+  background-color: var(--col-aqua);
+  color: white;
+  font-weight: 800;
+  height: 80%;
+  width: 5rem;
+}
 /*End Home Navbar*/
 
 @media screen and (max-width: 600px) {

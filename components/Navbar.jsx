@@ -1,13 +1,15 @@
-import styles from "../styles/nav.module.css";
 import Link from "next/link";
+
+//CSS
+import styles from "../styles/nav.module.css";
 
 function Navbar(props) {
   return (
     <div className={styles.navContainer}>
-      <a href="/">
+      <Link href="/">
         <h1>Prasetya Priyadi</h1>
-      </a>
-      <div className={props.navBox}>
+      </Link>
+      <div className={styles.navBox}>
         <Link href="/" className={styles.navMenu}>
           <a>Projects</a>
         </Link>
@@ -22,4 +24,20 @@ function Navbar(props) {
   );
 }
 
+function NavbarAdmin(props) {
+  return (
+    <div className={styles.navContainer}>
+      <Link href="/">
+        <h1>Prasetya Priyadi</h1>
+      </Link>
+      <div className={styles.adminNavBox}>
+        <button className={styles.logoutBtn} onClick={props.logoutHandler}>
+          Logout
+        </button>
+      </div>
+    </div>
+  );
+}
+
 export default Navbar;
+export { NavbarAdmin };

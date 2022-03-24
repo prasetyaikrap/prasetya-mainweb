@@ -42,7 +42,6 @@ section {
   min-height: 20rem;
   width: 100%;
   padding: 2rem 0;
-  top: 38px;
 }
 button {
   cursor: pointer;
@@ -66,7 +65,6 @@ footer {
   justify-content: center;
   background-color: var(--col-dkblue);
   height: 4rem;
-  top: 38px;
 }
 
 footer h3 {
@@ -76,3 +74,17 @@ footer h3 {
   text-align: center;
 }
 /*End Footer*/
+.post-content {
+  display: flex;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 1rem;
+  height: 2000vh;
+  border: none;
+}
+.post-container {
+  display: flex;
+  justify-content: center;
+  width: 75%;
+  overflow-x: hidden;
+}

@@ -2,9 +2,9 @@
 .dashboardContainer {
   display: flex;
   position: relative;
-  top: 38px;
+  box-sizing: border-box;
   width: 100%;
-  height: calc(100vh - 38px - 4rem);
+  height: calc(100vh - 7.5rem);
 }
 .sidebarContainer {
   display: flex;

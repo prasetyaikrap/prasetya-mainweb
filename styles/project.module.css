@@ -23,6 +23,9 @@
   background-color: var(--col-dkblue-2);
 }
 .projectCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
   margin: 10px 30px;
   padding: 1.5rem 3rem;
   width: 30rem;
@@ -30,6 +33,55 @@
   border-radius: 10px;
   box-shadow: 0 0 10px 5px var(--col-lg-gray);
   flex-shrink: 0;
+}
+.projectTitle {
+  font-family: var(--font-oswald);
+}
+.projectBody {
+  display: flex;
+  box-sizing: border-box;
+  column-gap: 15px;
+  height: 9rem;
+}
+.projectHashtag {
+  display: flex;
+  column-gap: 5px;
+}
+.projectHashtag span {
+  box-sizing: border-box;
+  padding: 3px 8px;
+  font-size: 0.85rem;
+  background-color: rgb(196, 196, 196);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: var(--font-oswald);
+}
+.projectBody img {
+  width: 11.25rem;
+  height: 9rem;
+  border-radius: 5px;
+  object-fit: cover;
+}
+.projectBody p {
+  width: 70%;
+  text-align: justify;
+  font-family: var(--font-oswald);
+}
+.projectBtn {
+  height: 2.3rem;
+  width: 7.5rem;
+  border: none;
+  outline: none;
+  background-color: var(--col-dkblue);
+  border-radius: 5px;
+  color: white;
+  font-weight: 1000;
+  margin: 0 0 0 auto;
+}
+.projectBtn:hover {
+  background-color: var(--col-dkblue-2);
+  transition: all 0.3s ease;
 }
 /*End Project Section*/
 
