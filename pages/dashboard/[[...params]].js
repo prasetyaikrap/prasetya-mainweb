@@ -21,52 +21,56 @@ function AdminDashboard() {
   if (!user) {
     router.push("/admin/login");
   }
-  //Re-Render Body
-  let body = "";
-  const { params = [] } = router.query;
-  switch (true) {
-    case params.length === 0:
-      body = <Footer />;
-      break;
-    case params[0] === "profile":
-      body = <ProfileSec />;
-      break;
-    case params[0] === "post":
-      body = <BlogPost />;
-      break;
-    case params[0] === "content":
-      switch (true) {
-        case params[1] === undefined:
-          body = <ContentManagement />;
-          break;
-        case params[1] === "blog-compose":
-          body = <BlogCompose />;
-          break;
-        case params[1] === "course-compose":
-          body = <CourseCompose />;
-          break;
-        case params[1] === "project-compose":
-          body = <ProjectCompose />;
-          break;
-        default:
-          body = <h1>Error Site. page does not exist</h1>;
-      }
-      break;
-    case params[0] === "settings":
-      body = <Course />;
-      break;
-    default:
-      body = <h1>Error Site. page does not exist</h1>;
-  }
+  const bodyDashboard = () => {
+    //Re-Render Body
+    let body = "";
+    const { params = [] } = router.query;
+    switch (true) {
+      case params.length === 0:
+        body = <Footer />;
+        break;
+      case params[0] === "profile":
+        body = <ProfileSec />;
+        break;
+      case params[0] === "post":
+        body = <BlogPost />;
+        break;
+      case params[0] === "content":
+        switch (true) {
+          case params[1] === undefined:
+            router.push("/dashboard/content/blog-compose");
+            break;
+          case params[1] === "blog-compose":
+            body = <BlogCompose />;
+            break;
+          case params[1] === "course-compose":
+            body = <CourseCompose />;
+            break;
+          case params[1] === "project-compose":
+            body = <ProjectCompose />;
+            break;
+          default:
+            body = <h1>Error Site. page does not exist</h1>;
+        }
+        break;
+      case params[0] === "settings":
+        body = <Course />;
+        break;
+      default:
+        body = <h1>Error Site. page does not exist</h1>;
+    }
+    return body;
+  };
+
   function logoutHandler(e) {
     e.preventDefault();
     logout();
-    router.push("/admin");
+    router.push("/admin/login");
   }
   return (
     <>
       <NavbarAdmin logoutHandler={logoutHandler} />
-      <Dashboard body={body} />
+      <Dashboard body={bodyDashboard()} />
       <Footer />
     </>
   );

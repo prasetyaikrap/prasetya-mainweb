@@ -4,7 +4,7 @@ function ProjectCard(props) {
       <h2 className={props.CSSprojectTitle}>{props.projectTitle}</h2>
       <div className={props.CSSprojectHashtag}>
         {props.projectHashtag.map((hashtag) => {
-          return <span>{hashtag}</span>;
+          return <span>#{hashtag}</span>;
         })}
       </div>
       <div className={props.CSSprojectBody}>

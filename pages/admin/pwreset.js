@@ -7,7 +7,7 @@ function PWReset() {
       <div className={`${styles.resetContainer}`}>
         <h1>Confirm Your Email</h1>
         <form className={`${styles.formContainer}`} action="/">
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input type="email" id="email" name="email" />
           <button className={`${styles.formBtn}`}>Reset</button>
         </form>

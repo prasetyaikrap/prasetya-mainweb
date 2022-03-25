@@ -85,6 +85,261 @@
 }
 /*End Project Section*/
 
+/* Project Compose */
+.composeContainer {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  padding: 1rem;
+  column-gap: 2.5rem;
+  row-gap: 2rem;
+  flex-wrap: wrap;
+}
+.composeBox,
+.settingsBox {
+  box-sizing: border-box;
+  box-shadow: 0 0 10px 1px var(--col-lg-gray);
+  border-radius: 7px;
+}
+.composeBox {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  width: 40rem;
+  row-gap: 10px;
+}
+.settingsBox {
+  width: 35rem;
+}
+.headerCompose {
+  font-family: var(--font-oswald);
+}
+
+.formCompose {
+  display: flex;
+  box-sizing: border-box;
+  column-gap: 10px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.inputBox1,
+.inputBox2,
+.inputBox3 {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  row-gap: 5px;
+  padding-left: 0.5rem;
+  width: 100%;
+}
+.inputBox2 {
+  width: calc((100% - 20px) / 2);
+}
+.inputBox3 {
+  width: calc(100% / 3);
+}
+.inputBox1 label,
+.inputBox2 label,
+.inputBox3 label {
+  font-size: 1.2rem;
+  font-family: var(--font-oswald);
+  width: 100%;
+}
+.inputBox1 input,
+.inputBox2 input,
+.inputBox3 input {
+  height: 1.8rem;
+  border-radius: 5px;
+  border: 1px solid var(--col-dkblue);
+  padding: 2px 10px;
+  outline: none;
+}
+.inputBox1 textarea {
+  border-radius: 5px;
+  border: 1px solid var(--col-dkblue);
+  padding: 2px 10px;
+  outline: none;
+  resize: none;
+}
+.inputBox1 input[type="file"],
+.inputBox2 input[type="file"],
+.inputBox3 input[type="file"] {
+  border: none;
+  height: auto;
+  width: 50%;
+}
+.uploadBtn {
+  color: transparent;
+}
+.uploadBtn::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.uploadBtn::before {
+  content: "Upload Image";
+  display: inline-block;
+  border: solid 1px gray;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  -webkit-user-select: none;
+  background-color: var(--col-dkblue-2);
+  color: white;
+  font-weight: 800;
+}
+.inputBox1 input:focus,
+.inputBox2 input:focus,
+.inputBox3 input:focus,
+.inputBox1 textarea:focus {
+  border: 1px solid var(--col-greyishblue);
+  transition: all 0.5s ease;
+}
+.inputBox2 input[type="file"]:focus {
+  border: none;
+}
+
+.hr {
+  width: 100%;
+}
+
+/* Project List Container */
+.contentBox {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  row-gap: 10px;
+  width: 100%;
+  min-height: 200px;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 1px var(--col-lg-gray);
+}
+.contentHeader {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 2rem 0.5rem 1rem;
+}
+.contentHeader h2 {
+  font-family: var(--font-oswald);
+}
+.contentHeader button {
+  width: 125px;
+  padding: 5px 0 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--col-dkblue-2);
+  color: white;
+  font-family: var(--font-oswald);
+  font-weight: 800;
+}
+.cardContainer {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 100%;
+}
+.contentCard {
+  display: flex;
+  column-gap: 20px;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+  width: 95%;
+  height: 4rem;
+  background-color: white;
+  border: 1px solid rgb(221, 221, 221);
+  border-radius: 5px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 3rem;
+}
+.contentItem {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+  width: 10rem;
+}
+.contentItem[id="contentTitle"] {
+  width: 25rem;
+}
+.contentItem h4 {
+  font-family: var(--font-oswald);
+  font-size: 1rem;
+}
+.contentItem p {
+  font-family: var(--font-oswald);
+  font-size: 0.8rem;
+  margin-left: 1rem;
+}
+.contentItem button {
+  background-color: var(--col-dkblue-2);
+  padding: 0.5rem 1.5rem;
+  color: white;
+  font-weight: 800;
+  border: none;
+  border-radius: 5px;
+}
+.itemAction {
+  display: flex;
+  flex-direction: row;
+}
+.itemAction button {
+  width: 3rem;
+  height: 2rem;
+  background-color: transparent;
+  border: 0.5px solid var(--col-lg-gray);
+}
+.itemAction button:nth-child(1) {
+  border-radius: 5px 0 0 5px;
+}
+.itemAction button:nth-child(1):hover {
+  background-color: greenyellow;
+  transition: all 0.3s ease;
+}
+.itemAction button:nth-child(2):hover {
+  background-color: red;
+  transition: all 0.3s ease;
+}
+.itemAction button:nth-child(3) {
+  border-radius: 0 5px 5px 0;
+}
+.itemAction button:nth-child(3):hover {
+  background-color: rgb(252, 236, 14);
+  transition: all 0.3s ease;
+}
+.contentPageNav {
+  display: flex;
+  position: relative;
+  justify-content: right;
+  box-sizing: border-box;
+  width: 100%;
+  margin: auto;
+  align-items: right;
+  padding: 5px 0.7rem 5px 0;
+}
+.arrowPrev,
+.arrowNext,
+.numberPage {
+  box-sizing: border-box;
+  width: 80px;
+  height: 30px;
+  border: 0.5px solid rgb(221, 221, 221);
+  background-color: white;
+}
+.arrowPrev {
+  border-radius: 10% 0 0 10%;
+}
+.arrowNext {
+  border-radius: 0 10% 10% 0;
+}
+
+.numberPage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+}
+
 @media screen and (max-width: 600px) {
   .projectCard {
     width: 24rem;
