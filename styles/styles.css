@@ -88,3 +88,99 @@ footer h3 {
   width: 75%;
   overflow-x: hidden;
 }
+
+/*TelkomSIgma*/
+.tsContainer,
+.ghrContainer,
+.finContainer {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  background-color: #5d8bf4;
+}
+
+.tsBox,
+.ghrBox,
+.finBox {
+  display: flex;
+  width: 40%;
+  min-height: 30%;
+  flex-direction: column;
+  box-shadow: 0 0 10px 1px rgb(206, 206, 206);
+  box-sizing: border-box;
+  border-radius: 5px;
+  background-color: white;
+  padding: 2rem;
+}
+
+.tsBox h1,
+.ghrBox h1,
+.finBox h1 {
+  margin: 1rem auto;
+  font-family: var(--font-oswald);
+}
+
+.tsBox p,
+.ghrBox p,
+.finBox p {
+  font-family: var(--font-oswald);
+  margin-left: 1rem;
+}
+
+.tsForm {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 3rem;
+  row-gap: 10px;
+}
+
+.tsForm label {
+  margin-bottom: -5px;
+  font-family: var(--font-oswald);
+}
+
+.tsForm input,
+.tsForm select {
+  border-radius: 5px;
+  height: 2rem;
+  padding: 3px 15px;
+}
+
+.tsForm button {
+  width: 30%;
+  margin: 0 auto;
+  height: 2rem;
+  background-color: #1e3c46;
+  color: white;
+  font-weight: 1000;
+  border: none;
+  border-radius: 5px;
+}
+
+.ghrTable,
+.finTable {
+  border: solid 1px gray;
+}
+
+.tableHeader {
+  background-color: #5d8bf4;
+  border: solid 1px gray;
+}
+
+.tableHeader th {
+  border: solid 1px gray;
+}
+
+.tableChild td {
+  box-sizing: border-box;
+  padding: 5px;
+  text-align: center;
+}
+
+.tsWarning {
+  color: red;
+  font-weight: 800;
+  text-align: center;
+}
