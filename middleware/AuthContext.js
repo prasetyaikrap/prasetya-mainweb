@@ -13,6 +13,7 @@ export const useAuth = () => useContext(AuthContext);
 function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [userDB, setUserDB] = useState(null);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       user ? setUser(user) : setUser(null);
@@ -20,7 +21,7 @@ function AuthProvider({ children }) {
     });
     return unsubscribe;
   }, []);
-  function login(email, password) {
+  async function login(email, password) {
     return signInWithEmailAndPassword(auth, email, password);
   }
   async function logout() {
@@ -28,7 +29,7 @@ function AuthProvider({ children }) {
     await signOut(auth);
   }
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, userDB }}>
       {loading ? null : children}
     </AuthContext.Provider>
   );

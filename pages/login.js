@@ -1,14 +1,14 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useRef, useState } from "react";
-import styles from "../../styles/authPage.module.css";
-import { useAuth } from "../../middleware/AuthContext";
+import styles from "../styles/authPage.module.css";
+import { useAuth } from "../middleware/AuthContext";
 
 function LoginForm() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const [signInMsg, setSignInMsg] = useState();
-  const { user, login } = useAuth();
+  const { login } = useAuth();
   const router = useRouter();
   async function handleLogin(e) {
     e.preventDefault();
@@ -49,7 +49,7 @@ function LoginForm() {
           </button>
         </form>
         <hr />
-        <Link href="/admin/pwreset">
+        <Link href="/pwreset">
           <a>Reset Password</a>
         </Link>
       </div>

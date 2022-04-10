@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../styles/authPage.module.css";
+import styles from "../styles/authPage.module.css";
 
 function PWReset() {
   return (
@@ -12,7 +12,7 @@ function PWReset() {
           <button className={`${styles.formBtn}`}>Reset</button>
         </form>
         <hr />
-        <Link href="/admin/login">
+        <Link href="/login">
           <a>Back to login</a>
         </Link>
       </div>

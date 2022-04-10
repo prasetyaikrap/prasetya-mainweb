@@ -4,14 +4,14 @@
   position: relative;
   box-sizing: border-box;
   width: 100%;
-  height: calc(100vh - 7.5rem);
+  height: calc(100vh - 4rem);
 }
 .sidebarContainer {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   height: 100%;
-  width: 13rem;
+  width: 15rem;
   background-color: var(--col-dkblue);
   padding-top: 2rem;
 }
