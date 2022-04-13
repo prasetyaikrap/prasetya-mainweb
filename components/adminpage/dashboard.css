@@ -6,7 +6,7 @@
   width: 100%;
   height: calc(100vh - 4rem);
 }
-.sidebarContainer {
+.dashboardSidebarContainer {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -15,37 +15,31 @@
   background-color: var(--col-dkblue);
   padding-top: 2rem;
 }
-.menuParent,
-.menuChild {
+.dashboardMenuParent,
+.dashboardMenuChild {
   border: none;
   text-align: left;
   padding: 1rem 0.5rem 1rem 2rem;
   background-color: var(--col-dkblue);
   color: var(--col-white);
 }
-.menuParent:hover,
-.menuChild:hover {
+.dashboardMenuParent:hover,
+.dashboardMenuChild:hover {
   cursor: pointer;
   background-color: var(--col-dkblue-2);
   transition: all 0.3s ease;
 }
-.menuChildBox {
+.dashboardMenuChildBox {
   display: flex;
   flex-direction: column;
   padding-left: 1.5rem;
 }
-.contentContainer {
+.dashboardContentContainer {
   box-sizing: border-box;
   height: 100%;
   width: calc(100% - 13rem);
   padding: 0.5rem 2rem 0.5rem 2rem;
   background-color: var(--col-white);
   overflow-y: scroll;
-}
-.contentContainer::after {
-  background-color: aqua;
-  position: absolute;
-  width: 100%;
-  height: 100%;
 }
 /*End Admin Dashboard*/

@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  /*Color Scheme*/
+  --col-white-primary: rgb(255, 255, 255);
+  --col-white-01: rgb(220, 220, 220);
+  --col-white-02: rgb(245, 245, 245);
+  --col-black-primary: rgb(0, 0, 0);
+  --col-black-01: rgb(0, 0, 0, 0.9);
+  --col-black-02: rgb(0, 0, 0, 0.6);
+  --col-black-03: rgb(52, 52, 52, 0.6);
+  --col-navy-vdark: rgb(10, 29, 36);
+  --col-navy-dark: rgb(5, 19, 103);
+  --col-navy: rgb(45, 49, 250);
+  --col-navy-light: rgb(93, 139, 244);
+  --col-navy-sky: rgb(223, 246, 255);
+  /*Fonts*/
+  --font-poppins: "Poppins", sans-serif;
+  --poppins-regular: 400;
+  --poppins-medium: 500;
+  --poppins-semibold: 600;
+  --poppins-bold: 700;
+
+  /*Transition Time*/
+  --trans-01: all 0.1s ease;
+  --trans-02: all 0.2s ease;
+  --trans-03: all 0.3s ease;
+  --trans-04: all 0.4s ease;
+  --trans-05: all 0.5s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-poppins);
+}
+/*Scrollbar*/
+::-webkit-scrollbar {
+  width: 7px;
+  margin-right: 2px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--col-navy-vdark);
+  border-radius: 7px;
+}
+/*Heading Tags*/
+h1 {
+  font-weight: var(--poppins-bold);
+  font-size: 34px;
+  letter-spacing: 0.01rem;
+}
+h2 {
+  font-weight: var(--poppins-semibold);
+  font-size: 24px;
+  letter-spacing: 0.01rem;
+  line-height: 125%;
+}
+h3 {
+  font-weight: var(--poppins-semibold);
+  font-size: 20px;
+  letter-spacing: 0.01rem;
+  line-height: 125%;
+}
+h4 {
+  font-weight: var(--poppins-semibold);
+  font-size: 16px;
+  letter-spacing: 0.01rem;
+}
+
+/*Content Font*/
+p.pageTitle {
+  font-weight: var(--poppins-bold);
+  font-size: 34px;
+  letter-spacing: 0.01rem;
+  line-height: 125%;
+}
+p.headline {
+  font-weight: var(--poppins-semibold);
+  font-size: 24px;
+  letter-spacing: 0.01rem;
+  line-height: 125%;
+}
+p.bodyText {
+  font-weight: var(--poppins-medium);
+  font-size: 16px;
+  letter-spacing: 0.01rem;
+  line-height: 125%;
+}
+p.small {
+  font-weight: var(--poppins-regular);
+  font-size: 13px;
+  letter-spacing: 0.01rem;
+  line-height: 125%;
+}
+.fontBlack {
+  color: var(--col-black-primary);
+}
+.fontBlack01 {
+  color: var(--col-black-01);
+}
+.fontBlack02 {
+  color: var(--col-black-02);
+}
+.fontBlack03 {
+  color: var(--col-black-03);
+}
+.fontWhite {
+  color: var(--col-white-primary);
+}
+
+/*Button*/
+button {
+  cursor: pointer;
+}

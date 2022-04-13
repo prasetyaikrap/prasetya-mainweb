@@ -13,7 +13,6 @@ export const useAuth = () => useContext(AuthContext);
 function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [userDB, setUserDB] = useState(null);
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       user ? setUser(user) : setUser(null);
@@ -29,7 +28,7 @@ function AuthProvider({ children }) {
     await signOut(auth);
   }
   return (
-    <AuthContext.Provider value={{ user, login, logout, userDB }}>
+    <AuthContext.Provider value={{ user, login, logout }}>
       {loading ? null : children}
     </AuthContext.Provider>
   );

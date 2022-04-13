@@ -1,15 +1,31 @@
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
-import { db } from "../../middleware/firebase.js";
+import { db } from "../utils/firebase.js";
 
 export default async function profileData(req, res, next) {
-  console.log(req.body);
-  res.status(200).json({ name: "Profile data API" });
+  const params = req.query;
+  const method = req.method;
+  if (method === "GET") {
+    const userid = params.uid;
+    const docPath = "user/user_" + userid + "/profile/profile_" + userid;
+    const docRef = doc(db, docPath);
+    try {
+      const docSnap = await getDoc(docRef);
+      res.status(200).json({
+        docId: docSnap.id,
+        data: docSnap.data(),
+      });
+    } catch (err) {
+      res.json({
+        errorMsg: "Data Failed to load or document is does not exist",
+        error: err,
+      });
+    }
+  }
 }
 
 export async function addProfileData(userid, profileData) {
-  const userDocId = "user_" + userid;
-  const profileDocId = "profile_" + userid;
-  const docRef = doc(db, "user", userDocId, "profile", profileDocId);
+  const docPath = "user/user_" + userid + "/profile/profile_" + userid;
+  const docRef = doc(db, docPath);
   try {
     await setDoc(docRef, profileData, { merge: true });
   } catch (err) {
@@ -18,9 +34,8 @@ export async function addProfileData(userid, profileData) {
 }
 
 export async function getProfileData(userid) {
-  const userDocId = "user_" + userid;
-  const profileDocId = "profile_" + userid;
-  const docRef = doc(db, "user", userDocId, "profile", profileDocId);
+  const docPath = "user/user_" + userid + "/profile/profile_" + userid;
+  const docRef = doc(db, docPath);
   try {
     const docSnap = await getDoc(docRef);
     return {

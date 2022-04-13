@@ -157,14 +157,32 @@
   border: none;
   resize: none;
 }
-.inputBoxContact {
+.inputBoxContact,
+.inputBoxAccount {
   flex-direction: row;
 }
-.inputBoxContact span {
+.inputBoxContact span,
+.inputBoxAccount span {
   width: calc(42rem / 2);
+}
+.changePWDBtn {
+  height: 100%;
+  padding: 0.3rem 2rem;
+  background-color: var(--col-dkblue);
+  color: white;
+  font-weight: 800;
+  border-radius: 5px;
+  border: none;
+  margin: auto 0;
+}
+.contactIcon {
+  color: var(--col-dkblue);
+  margin: auto;
+  width: 2.5rem;
 }
 .actionBtnContainer {
   display: flex;
+  justify-content: flex-end;
   column-gap: 1rem;
   margin-top: 1rem;
 }

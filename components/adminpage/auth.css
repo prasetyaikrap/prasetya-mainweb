@@ -48,7 +48,7 @@
   margin: auto;
   border-radius: 5px;
   border: none;
-  background-color: var(--col-dkblue);
+  background-color: var(--col-navy-vdark);
   color: white;
   font-family: var(--font-oswald);
 }
