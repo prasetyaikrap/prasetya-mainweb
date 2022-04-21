@@ -1,5 +1,5 @@
 import { doc, getDoc, setDoc, updateDoc } from "firebase/firestore";
-import { db } from "../utils/firebase.js";
+import { db } from "../../utils/firebase.js";
 
 export default async function profileData(req, res, next) {
   const params = req.query;

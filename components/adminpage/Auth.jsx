@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
 import React, { useRef, useState } from "react";
-import { useAuth } from "../../pages/utils/AuthContext";
+import { useAuth } from "../../utils/AuthContext";
 
 export default function LoginPage(props) {
   const pathQuery = props.query;

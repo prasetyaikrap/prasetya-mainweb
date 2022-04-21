@@ -1,11 +1,12 @@
 import Head from "next/head";
 //components
-import Navbar from "../components/Navbar";
+import Navbar from "../components/01_navbar/Navbar";
 import ProfileSec from "../components/ProfilePrev";
 import Course from "../components/CoursePrev";
 import Project from "../components/ProjectPrev";
 import Footer from "../components/Footer";
-import Blogpreview from "../components/BlogPrev";
+import ContentPreview from "../components/02_content/ContentPreview";
+import { BlogCardPreview } from "../components/02_content/BlogCard";
 
 function Home() {
   return (
@@ -24,11 +25,11 @@ function Home() {
           content="Belajar dan paham teknologi dengan mudah dan menyenangkan"
         />
       </Head>
-      <nav>
+      <nav className="g-navSticky">
         <Navbar />
       </nav>
       <main>
-        <Blogpreview />
+        <ContentPreview />
         <Project />
         <ProfileSec />
       </main>

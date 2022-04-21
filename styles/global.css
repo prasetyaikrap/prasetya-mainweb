@@ -5,6 +5,7 @@
   --col-white-primary: rgb(255, 255, 255);
   --col-white-01: rgb(220, 220, 220);
   --col-white-02: rgb(245, 245, 245);
+  --col-white-03: rgb(250, 250, 250);
   --col-black-primary: rgb(0, 0, 0);
   --col-black-01: rgb(0, 0, 0, 0.9);
   --col-black-02: rgb(0, 0, 0, 0.6);
@@ -33,7 +34,9 @@
   margin: 0;
   padding: 0;
   font-family: var(--font-poppins);
+  box-sizing: border-box;
 }
+
 /*Scrollbar*/
 ::-webkit-scrollbar {
   width: 7px;
@@ -68,25 +71,38 @@ h4 {
 }
 
 /*Content Font*/
-p.pageTitle {
+.pageTitle {
   font-weight: var(--poppins-bold);
   font-size: 34px;
   letter-spacing: 0.01rem;
   line-height: 125%;
 }
-p.headline {
+.headline {
   font-weight: var(--poppins-semibold);
   font-size: 24px;
   letter-spacing: 0.01rem;
   line-height: 125%;
 }
-p.bodyText {
+.bodyTitle {
+  font-weight: var(--poppins-semibold);
+  font-size: 20px;
+  letter-spacing: 0.01rem;
+  line-height: 125%;
+}
+.bodyText,
+.navText {
   font-weight: var(--poppins-medium);
   font-size: 16px;
   letter-spacing: 0.01rem;
   line-height: 125%;
 }
-p.small {
+.buttonText {
+  font-weight: var(--poppins-medium);
+  font-size: 14.5px;
+  letter-spacing: 0.01rem;
+  line-height: 125%;
+}
+.smallText {
   font-weight: var(--poppins-regular);
   font-size: 13px;
   letter-spacing: 0.01rem;
@@ -111,4 +127,12 @@ p.small {
 /*Button*/
 button {
   cursor: pointer;
+}
+
+/*others*/
+.g-navSticky {
+  display: block;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
