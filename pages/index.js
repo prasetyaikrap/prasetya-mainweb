@@ -3,10 +3,9 @@ import Head from "next/head";
 import Navbar from "../components/01_navbar/Navbar";
 import ProfileSec from "../components/ProfilePrev";
 import Course from "../components/CoursePrev";
-import Project from "../components/ProjectPrev";
+import ProjectPreview from "../components/03_project/ProjectPreview";
 import Footer from "../components/Footer";
 import ContentPreview from "../components/02_content/ContentPreview";
-import { BlogCardPreview } from "../components/02_content/BlogCard";
 
 function Home() {
   return (
@@ -30,7 +29,7 @@ function Home() {
       </nav>
       <main>
         <ContentPreview />
-        <Project />
+        <ProjectPreview />
         <ProfileSec />
       </main>
       <footer>

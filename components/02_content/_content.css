@@ -75,9 +75,11 @@
   justify-content: center;
   padding: 0.5rem 0;
   cursor: pointer;
+  background-color: var(--col-navy-dark);
+  color: var(--col-white-03);
 }
 .seeMoreBtn:hover {
-  background-color: var(--col-white-03);
+  opacity: 90%;
   transition: var(--trans-02);
 }
 
@@ -94,8 +96,8 @@
   transition: var(--trans-02);
 }
 .socmedNav button.active {
-  background-color: var(--col-navy-vdark);
-  color: var(--col-white-01);
+  background-color: var(--col-navy-dark);
+  color: var(--col-white-03);
   font-weight: 600;
 }
 .socmedPreview {

@@ -1,0 +1,94 @@
+.projectPreviewSection {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  padding: 2rem 4rem;
+  min-height: 50vh;
+  background-color: var(--col-white-primary);
+}
+.projectPreviewSection h1 {
+  margin: 0 auto;
+}
+.projectPreviewContainer {
+  display: flex;
+  overflow-x: auto;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  column-gap: 1.5rem;
+  width: 100%;
+  padding: 1rem 2rem;
+}
+/* .projectPreviewContainer::before,
+.projectPreviewContainer::after {
+  content: "";
+  position: absolute;
+  width: 1rem;
+  height: 20rem;
+  opacity: 10%;
+}
+.projectPreviewContainer::before {
+  left: 4rem;
+  background-image: linear-gradient(to right, black, white);
+}
+.projectPreviewContainer::after {
+  right: 4rem;
+  background-image: linear-gradient(to left, black, white);
+} */
+.projectPreviewContainer::-webkit-scrollbar {
+  height: 7px;
+}
+.projectPreviewContainer::-webkit-scrollbar-thumb {
+  background-color: var(--col-navy-vdark);
+}
+
+/*ProjectCard*/
+.projectCard {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0.5rem;
+  border-radius: 7px;
+  padding: 1.5rem 2.5rem;
+  box-shadow: 0 0 10px 2px var(--col-white-01);
+}
+.projectCardTitle {
+  height: 3.2rem;
+}
+.projectCardHashtag {
+  display: flex;
+  column-gap: 0.5rem;
+}
+.projectCardHashtag span {
+  padding: 0.3rem 0.5rem;
+  border-radius: 5px;
+  background-color: var(--col-white-01);
+}
+.projectCardBody {
+  display: flex;
+  column-gap: 1rem;
+  height: 9rem;
+}
+.projectCardBody img {
+  width: 9rem;
+  height: 9rem;
+  object-fit: cover;
+  border-radius: 5px;
+}
+.projectCardBody p {
+  width: 20rem;
+  text-align: justify;
+}
+.projecCardtBtn {
+  background-color: var(--col-navy-dark);
+  color: var(--col-white-03);
+  font-weight: 600;
+  border: none;
+  border-radius: 5px;
+  padding: 0.3rem 0;
+  width: 10rem;
+  align-self: flex-end;
+}
+.projectCardBtn:hover {
+  opacity: 90%;
+  transition: var(--trans-02);
+}
